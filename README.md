@@ -7,9 +7,13 @@ and affine transformation as steps for preprocessing.
 Our proposed model achieved 74% training accuracy and 65% test accuracy on the validation set trained using SGD, outperforming its Adam counterpart, while ResNet50 scored 97% and 68% on training and
 testing, respectively. Live testing was implemented via a Django app with OpenCV, which pointed out some challenges. Misclassification of the Disgust class arising from data imbalance was noted among other issues. Results were good, but also underlined the necessity of addressing FER's class imbalance issues.
 
+## Setting up code
 - You need to download the dataset [https://www.kaggle.com/datasets/jonathanoheix/face-expression-recognition-dataset](here) and extract the contents into a folder named `jonathan_oheix`.
 - Create a virtual environment with Anaconda or venv: `python -m venv fervenv`. Ensure the environment is activated.
 - Run `pip install requirements.txt`
+- You can then use any of the Jupyter notebook files to train your model.
+- In the Jupyter notebooks, you may need to modify *emotion_recognition/pages/cnn_models.py/EmotionClassifier* class (Line 16) to include the name of your saved model weights. It has to be in the root directory just as it is on GitHub.
+- You also need to modify *emotion_recognition/pages/cnn_models.py/resnet_model* with the appropriate path as well.
 
 ## Demo App (Django)
 - To set up the app for the demo app, you need to run `python manage.py makemigrations` then `python manage.py migrate`.
