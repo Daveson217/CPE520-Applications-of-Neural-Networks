@@ -14,7 +14,21 @@ testing, respectively. Live testing was implemented via a Django app with OpenCV
 - You can then use any of the Jupyter notebook files to train your model.
 - In the Jupyter notebooks, you may need to modify *emotion_recognition/pages/cnn_models.py/EmotionClassifier* class (Line 16) to include the name of your saved model weights. It has to be in the root directory just as it is on GitHub.
 - You also need to modify *emotion_recognition/pages/cnn_models.py/resnet_model* with the appropriate path as well.
+- We have uploaded our saved weights. You can use that as well.
 
 ## Demo App (Django)
 - To set up the app for the demo app, you need to run `python manage.py makemigrations` then `python manage.py migrate`.
 - Run `python manage.py runserver` to start the server.
+
+![image](https://github.com/user-attachments/assets/9c9ff373-dc7d-4e00-9907-fa40b186eb53)
+
+![image](https://github.com/user-attachments/assets/154d344a-002a-48cb-b6e0-907f823b31db)
+
+
+|     |  |
+| -------- | ------- |
+| ![image](https://github.com/user-attachments/assets/64f7ff66-8acb-4cc3-bc93-8140ad24046a)| ![image](https://github.com/user-attachments/assets/0bf27905-2eb7-428d-9931-34e08065b50e) |
+| ![image](https://github.com/user-attachments/assets/6c23cd51-a9b1-4c96-85be-c95d746347ec)| ![image](https://github.com/user-attachments/assets/b557ef19-ef42-4f38-a6f0-e144207a514e) |
+
+
+
