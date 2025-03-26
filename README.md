@@ -1,4 +1,5 @@
 # Facial Recognition of Emotion with Convolutional Neural Networks: a comparison of different models
+> This was a group project I did with Samuel Olugbemi.
 
 ## Abstract
 Facial emotion recognition applications range from human-computer interactions to healthcare. In light of this, we proposed a CNN for emotion recognition in this work evaluated against ResNet50, VGG, and GoogLeNet with a dataset of grayscale 48x48 facial images of seven classes of emotion. We implemented normalization, flipping,
