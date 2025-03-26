@@ -1,0 +1,203 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>One Page Wonder - Start Bootstrap Template</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+            <div class="container px-5">
+                <a class="navbar-brand" href="#page-top"><img src="{% static "assets/img/wvu_logo.png" %}" width="50" class="d-inline-block align-top" alt=""> CPE 520 Project</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#!"><i class="fa-brands fa-github"></i> Github</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Header-->
+        <header class="masthead text-center text-white">
+            <div class="masthead-content">
+                <div class="container px-5">
+                    <h1 class="masthead-heading mb-0">Face Emotion Recognition with Different Models</h1>
+                    <h2 class="masthead-subheading mb-0">CpE 520 Term Project</h2>
+                    <h3 class="mb-0">David O. Babalola & Samuel Olugbemi</h3>
+                    <a class="btn btn-primary btn-xl rounded-pill mt-5" href="{% url 'live_feed' model_name='ours' %}">Our Model with SGD</a>
+                    <a class="btn btn-primary btn-xl rounded-pill mt-5" href="{% url 'live_feed' model_name='resnet' %}">ResNet50 with SGD</a>
+                </div>
+            </div>
+            <div class="bg-circle-1 bg-circle"></div>
+            <div class="bg-circle-2 bg-circle"></div>
+            <div class="bg-circle-3 bg-circle"></div>
+            <div class="bg-circle-4 bg-circle"></div>
+        </header>
+        <!-- Content section 1-->
+        <section id="scroll">
+            <div class="container px-5">
+                <div class="row gx-5 align-items-center">
+                    <div class="col-lg-6 order-lg-2">
+                        <div class="p-5"><img class="img-fluid rounded-circle" src="{% static "assets/img/01.jpg" %}" alt="..." /></div>
+                    </div>
+                    <div class="col-lg-6 order-lg-1">
+                        <div class="p-5">
+                            <h2 class="display-4">Emotion Recognized</h2>
+                            <ul class="list-group">
+                                <li class="list-group-item">Anger</li>
+                                <li class="list-group-item">Disgust</li>
+                                <li class="list-group-item">Fear</li>
+                                <li class="list-group-item">Happiness</li>
+                                <li class="list-group-item">Neutral</li>
+                                <li class="list-group-item">Sad</li>
+                                <li class="list-group-item">Surprise</li>
+                              </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Content section 2-->
+        <section>
+            <div class="container px-5">
+                <div class="row gx-5 align-items-center">
+                    <div class="col-lg-6">
+                        <div class="p-5"><img class="img-fluid rounded-circle" src="{% static "assets/img/02.jpg" %}" alt="..." /></div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="p-5">
+                            <h2 class="display-4">Modes Compared</h2>
+                            <ul>
+                                <li>Our Model</li>
+                                <li>ResNet50</li>
+                                <li>GoogLeNet</li>
+                                <li>VGG</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Content section 3-->
+        <section>
+            <div class="container px-5">
+                <div class="row gx-5 align-items-center">
+                    <div class="col-lg-6 order-lg-2">
+                        <div class="p-5"><img class="img-fluid rounded-circle" src="{% static "assets/img/03.jpg" %}" alt="..." /></div>
+                    </div>
+                    <div class="col-lg-6 order-lg-1">
+                        <div class="p-5">
+                            <h3 class="">Model Comparisons for SGD</h3>
+                            <table class="table border-warning">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Model</th>
+                                    <th scope="col">Epoch</th>
+                                    <th scope="col">Final Train/Test Loss</th>
+                                    <th scope="col">Final Train/Test Accuracy</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="row">1</th>
+                                    <td>Our Model</td>
+                                    <td>21</td>
+                                    <td>0.7157/0.9972</td>
+                                    <td>0.7388/0.6475</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">2</th>
+                                    <td>ResNet50</td>
+                                    <td>13</td>
+                                    <td>0.1041/1.4028</td>
+                                    <td>0.9668/0.6790</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">3</th>
+                                    <td>GoogleNet</td>
+                                    <td>16</td>
+                                    <td>0.6701/1.0326</td>
+                                    <td>0.7517/0.6427</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">4</th>
+                                    <td>VGG</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+
+                            <h3 class="">Model Comparisons for Adam</h3>
+                            <table class="table border-warning">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Model</th>
+                                    <th scope="col">Epoch</th>
+                                    <th scope="col">Final Train/Test Loss</th>
+                                    <th scope="col">Final Train/Test Accuracy</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="row">1</th>
+                                    <td>Our Model</td>
+                                    <td>43</td>
+                                    <td>1.8105/1.8241</td>
+                                    <td>0.2490/0.2601</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">2</th>
+                                    <td>ResNet50</td>
+                                    <td>9</td>
+                                    <td>1.6495/38.8442</td>
+                                    <td>0.3350/0.3476</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">3</th>
+                                    <td>GoogleNet</td>
+                                    <td>50</td>
+                                    <td>1.1162/1.1576</td>
+                                    <td>0.5704/0.5721</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">4</th>
+                                    <td>VGG</td>
+                                    <td>22</td>
+                                    <td>1.8104/1.8084</td>
+                                    <td>0.2487/0.2590</td>
+                                  </tr>
+                                </tbody>
+                              </table>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="py-5 bg-black">
+            <div class="container px-5"><p class="m-0 text-center text-white small">Copyright &copy; Your Website 2023</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="{% static 'js/scripts.js' %}"></script>
+    </body>
+</html>
